@@ -20,7 +20,7 @@ public class LoginSteps {
 
     @And("user is logs in to the application")
     public void loginToApplication() {
-        LoginPage loginPage = PageFactory.getInstance(LoginPage.class, this.context.driver);
+        LoginPage loginPage = PageFactory.getInstance(LoginPage.class,this.context.driver);
         loginPage.login("intercityashwin@gmail.com","Chennai@12163");
         System.out.println(loginPage.getTitle());
         Assert.assertTrue(true);
