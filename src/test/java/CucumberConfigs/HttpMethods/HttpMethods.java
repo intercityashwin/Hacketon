@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
 public class HttpMethods {
-    public Response post(String url,Object payload){
+    public static Response post(String url,Object payload){
                return   given()
                             .spec(RequestResponseSpecification.REQUEST_SPECIFICATION).body(payload)
                         .when()
@@ -15,7 +15,7 @@ public class HttpMethods {
                             .spec(RequestResponseSpecification.RESPONSE_SPECIFICATION).extract().response();
     }
 
-    public Response get(String url){
+    public static Response get(String url){
                 return   given()
                             .spec(RequestResponseSpecification.REQUEST_SPECIFICATION)
                          .when()
@@ -24,7 +24,7 @@ public class HttpMethods {
                             .spec(RequestResponseSpecification.RESPONSE_SPECIFICATION).extract().response();
     }
 
-    public Response put(String url,Object payload){
+    public static Response put(String url,Object payload){
                 return   given()
                             .spec(RequestResponseSpecification.REQUEST_SPECIFICATION).body(payload)
                          .when()

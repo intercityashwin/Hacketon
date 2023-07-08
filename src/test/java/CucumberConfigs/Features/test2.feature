@@ -1,14 +1,11 @@
-Feature: Login
+Feature: Hackethon Test Cases
 
-  Scenario: Dummy Test
-    Given user is logs in to the application
-    And login details are
+  Scenario: Task 1
+    Given user launch the application
+    When user navigates to stats
+    And user validates the batter drop down is selected
+    And user gets the player details
 
-  Scenario: Dummy Test 1
-    Given user is logs in to the application
-    And login details are
-
-
-  Scenario: Dummy Test 2
-    Given user is logs in to the application
-    And login details are
+  Scenario: Task 2
+    Given user launch the application
+    When user navigates to teams and validate the status code
