@@ -23,13 +23,13 @@ public class LoginPage{
     public LoginPage(WebDriver driver){
         super();
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(this.driver,this);
     }
 
     public void login(String email,String password){
-        driver.get(getPropertyValue("url"));
+        this.driver.get(getPropertyValue("url"));
         btnLogin.click();
-        driver.findElement(By.cssSelector("a.ico-login")).click();
+        this.driver.findElement(By.cssSelector("a.ico-login")).click();
         txtEmail.sendKeys(email);
         txtPassword.sendKeys(password);
     }
